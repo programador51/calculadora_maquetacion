@@ -21,6 +21,7 @@ body .header {
 
 body .header img {
   max-height: 100%;
+  -webkit-animation: spin 4s infinite linear;
 }
 
 body .header h1 {
@@ -166,11 +167,11 @@ a {
 .fime {
   background: #020024;
   background: linear-gradient(200deg, #020024 0%, #0a4200 0%, #a8d188 100%);
-  transition: 3s ease-in;
+  transition: transform ease-in;
 }
 
 .fime:hover {
-  transition: 3s ease-in;
+  transition: all 3s ease-in;
   background: #020024;
   background: radial-gradient(circle, #020024 0%, #0a4200 0%, #a8d188 100%);
 }
@@ -183,5 +184,14 @@ a {
 .fb:hover {
   background: #020024;
   background: radial-gradient(circle, #020024 0%, #000542 0%, #54e1ff 100%);
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
